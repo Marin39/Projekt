@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="09f1b284-5a5e-4302-bd7a-b0931dcbc8e7" Publisher="CN=Marin" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="09f1b284-5a5e-4302-bd7a-b0931dcbc8e7" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Kalkulator</DisplayName>
+    <PublisherDisplayName>Marin</PublisherDisplayName>
+    <Logo>Assets\icon200.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Kalkulator.App">
+      <uap:VisualElements DisplayName="Kalkulator" Square150x150Logo="Assets\icon150.png" Square44x44Logo="Assets\icon44.png" Description="Kalkulator" BackgroundColor="transparent">
+        <uap:DefaultTile ShortName="Calc">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\icon620.png" BackgroundColor="red" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

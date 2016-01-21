@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="Kalkulator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Kalkulator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="400" Height="550" Foreground="Black">
+
+    <Grid Background="Black" Margin="10,0,10,10" Width="375" Height="540">
+        <TextBox x:Name="displayTextBox" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Foreground="Black" Background="White" TextChanged="textBox_TextChanged" Height="52" Width="375" BorderBrush="White"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Margin="6,279,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" RequestedTheme="Dark" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Margin="98,279,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Margin="190,279,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="buttonPlus" Content="+" HorizontalAlignment="Left" Margin="282,279,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="#FF27CB2F" Foreground="Black" FontSize="32" FontWeight="Bold"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Margin="6,344,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="98,344,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="190,344,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="buttonMinus" Content="-" HorizontalAlignment="Left" Margin="282,344,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="#FF27CB2F" Foreground="Black" FontSize="32" FontWeight="Bold"/>
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="6,409,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Margin="98,409,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="190,409,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="buttonMull" Content="*" HorizontalAlignment="Left" Margin="282,409,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="#FF27CB2F" Foreground="Black" FontSize="32" FontWeight="Bold"/>
+        <Button x:Name="button0" Content="0" HorizontalAlignment="Left" Margin="6,474,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="buttonPoint" Content="." HorizontalAlignment="Left" Margin="98,474,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="Yellow" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="buttonEquals" Content="=" HorizontalAlignment="Left" Margin="190,474,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="#FF4664FF" Foreground="Black" FontWeight="Bold" FontSize="32"/>
+        <Button x:Name="buttonDiv" Content="/" HorizontalAlignment="Left" Margin="282,474,0,0" VerticalAlignment="Top" Height="60" Width="87" Click="buttonClick" Background="#FF27CB2F" Foreground="Black" FontSize="32" FontWeight="Bold"/>
+        <Button x:Name="button10x" Content="10ⁿ" HorizontalAlignment="Left" Margin="6,242,0,0" VerticalAlignment="Top" Background="#FFFF9614" Width="68" Foreground="Black" FontWeight="Bold" Click="buttonClick"/>
+        <Button x:Name="buttonXY" Content="xⁿ" HorizontalAlignment="Left" Margin="80,242,0,0" VerticalAlignment="Top" Background="#FFFF9614" Width="68" Foreground="Black" FontWeight="Bold" Click="buttonClick"/>
+        <Button x:Name="buttonX1" Content="X^(-1)" HorizontalAlignment="Left" Margin="153,242,0,0" VerticalAlignment="Top" Background="#FFFF9614" Width="69" Foreground="Black" FontWeight="Bold" Click="buttonClick"/>
+        <Button x:Name="buttonX2" Content="X^2" HorizontalAlignment="Left" Margin="227,242,0,0" VerticalAlignment="Top" Background="#FFFF9614" Click="buttonClick" Width="68" Foreground="Black" FontWeight="Bold"/>
+        <Button x:Name="buttonX3" Content="X^3" HorizontalAlignment="Left" Margin="301,242,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" Foreground="Black" FontWeight="Bold" />
+        <Button x:Name="buttonNsqrt" Content="X^4" HorizontalAlignment="Left" Margin="6,205,0,0" VerticalAlignment="Top" Background="#FFFF9414" Click="buttonClick"  Width="68" Foreground="Black" FontWeight="Bold"/>
+        <Button x:Name="buttonBopen" Content="(" HorizontalAlignment="Left" Margin="80,205,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" Foreground="Black" FontWeight="Bold"/>
+        <Button x:Name="buttonBclose" Content=")" HorizontalAlignment="Left" Margin="153,205,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="69" Foreground="Black" FontWeight="Bold"/>
+        <Button x:Name="buttonSqrt2" Content="√x" HorizontalAlignment="Left" Margin="227,205,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" Foreground="Black" FontWeight="Bold"/>
+        <Button x:Name="buttonFact" Content="n!" HorizontalAlignment="Left" Margin="301,205,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" Foreground="Black" FontWeight="Bold"/>
+        <Button x:Name="buttonE" Content="e" HorizontalAlignment="Left" Margin="6,168,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonEn" Content="eⁿ" HorizontalAlignment="Left" Margin="80,168,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonLn" Content="ln" HorizontalAlignment="Left" Margin="153,168,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="69" FontWeight="Bold"/>
+        <Button x:Name="buttonLog10" Content="log10" HorizontalAlignment="Left" Margin="227,168,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonLog" Content="log" HorizontalAlignment="Left" Margin="301,168,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonPi" Content="π" HorizontalAlignment="Left" Margin="6,131,0,0" VerticalAlignment="Top" Background="#FFFF9614"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonDegRad" Content="RAD" HorizontalAlignment="Left" Margin="80,131,0,0" VerticalAlignment="Top" Background="#FFFF9414"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonAbs" Content="|x|" HorizontalAlignment="Left" Margin="153,131,0,0" VerticalAlignment="Top" Background="#FFFF9414"  Click="buttonClick" Width="69" FontWeight="Bold"/>
+        <Button x:Name="buttonMod" Content="Mod" HorizontalAlignment="Left" Margin="227,131,0,0" VerticalAlignment="Top" Background="#FFFF9414"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonAns" Content="Ans" HorizontalAlignment="Left" Margin="301,131,0,0" VerticalAlignment="Top" Background="#FFFF9414"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonAsin" Content="asin" HorizontalAlignment="Left" Margin="6,94,0,0" VerticalAlignment="Top" Background="Red"  Click="buttonClick" Width="68" FontWeight="Bold" Foreground="Black"/>
+        <Button x:Name="buttonAcos" Content="acos" HorizontalAlignment="Left" Margin="80,94,0,0" VerticalAlignment="Top" Background="Red"  Click="buttonClick" Width="68" FontWeight="Bold" Foreground="Black"/>
+        <Button x:Name="buttonAtan" Content="atan" HorizontalAlignment="Left" Margin="153,94,0,0" VerticalAlignment="Top" Background="Red"  Click="buttonClick" Width="69" FontWeight="Bold" Foreground="Black"/>
+        <Button x:Name="buttonLeft" Content="&lt;" HorizontalAlignment="Left" Margin="227,94,0,0" VerticalAlignment="Top" Background="#FF320FA8"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonRight" Content="&gt;" HorizontalAlignment="Left" Margin="301,94,0,0" VerticalAlignment="Top" Background="#FF320FA8" Click="buttonClick"  Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonSin" Content="sin" HorizontalAlignment="Left" Margin="6,57,0,0" VerticalAlignment="Top" Background="Red" Width="68"  Click="buttonClick" FontWeight="Bold" Foreground="Black"/>
+        <Button x:Name="buttonCos" Content="cos" HorizontalAlignment="Left" Margin="80,57,0,0" VerticalAlignment="Top" Background="Red" Width="68"  Click="buttonClick" FontWeight="Bold" Foreground="Black"/>
+        <Button x:Name="buttonTan" Content="tan" HorizontalAlignment="Left" Margin="153,57,0,0" VerticalAlignment="Top" Background="Red" Width="69"  Click="buttonClick" FontWeight="Bold" Foreground="Black"/>
+        <Button x:Name="buttonDel" Content="del" HorizontalAlignment="Left" Margin="227,57,0,0" VerticalAlignment="Top" Background="#FF320FA8"  Click="buttonClick" Width="68" FontWeight="Bold"/>
+        <Button x:Name="buttonClear" Content="C" HorizontalAlignment="Left" Margin="301,57,0,0" VerticalAlignment="Top" Background="#FF320FA8" Click="buttonClick"  Width="68" FontWeight="Bold"/>
+
+
+
+
+
+    </Grid>
+</Page>
